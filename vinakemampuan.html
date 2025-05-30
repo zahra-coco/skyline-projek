@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuansa Fried Chicken - Kemampuan</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(90deg, #2c6b1f, #fdd600, #2c6b1f);
+        padding: 1rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem;
+        background: linear-gradient(to right, #98c77b, #ffca7a);
+      }
+
+      .left {
+        flex: 1;
+        min-width: 300px;
+        max-width: 400px;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .left img {
+        border-radius: 50%;
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid #2c6b1f;
+      }
+
+      .left h3 {
+        margin-top: 1rem;
+        font-family: "Times New Roman", serif;
+        font-size: 1.2rem;
+        color: #2c6b1f;
+      }
+
+      .skills {
+        flex: 2;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-family: "Times New Roman", serif;
+        justify-content: center;
+      }
+
+      .skill-block {
+        background: white;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 250px;
+        max-width: 300px;
+      }
+
+      .skill-block h4 {
+        color: #2c6b1f;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+
+      .skill-block img.icon {
+        width: 30px;
+        margin: 5px;
+      }
+
+      .skill-block ul {
+        padding-left: 20px;
+      }
+
+      .motto {
+        text-align: center;
+        padding: 1rem;
+        font-style: italic;
+        font-family: "Times New Roman", serif;
+        background: #eaf4e4;
+      }
+
+      footer {
+        background: #2c6b1f;
+        color: white;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+
+      .footer-section {
+        flex: 1 1 200px;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .socials a {
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Nuansa Fried Chicken</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="vinaaboutme.html">About me</a>
+        <a href="vinapengalaman.html">Pengalaman</a>
+        <a href="vinakemampuan.html">Kemampuan</a>
+        <a href="vinasertifikat.html">Sertifikat</a>
+        <a href="vinakontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="left">
+        <img src="images/vina.jpeg" alt="Vina" />
+        <h3>Vina Mustika Sari</h3>
+      </div>
+
+      <div class="skills">
+        <div class="skill-block">
+          <h4>Basic Coding</h4>
+          <p>
+            <img src="images/logojs.png" class="icon" />
+            <img src="images/logocss.png" class="icon" />
+            <img src="images/logohtml.png" class="icon" />
+          </p>
+        </div>
+
+        <div class="skill-block">
+          <h4>Desain Web</h4>
+          <p>
+            <img src="images/logofigma.png" class="icon" />
+            Mendesain web di Figma
+          </p>
+        </div>
+
+        <div class="skill-block">
+          <h4>Linux Debian Administrator</h4>
+          <ul>
+            <li>Basic Command</li>
+            <li>Basic Configuration</li>
+            <li>SSH</li>
+            <li>DNS (Server,Master,Slave,Resolver)</li>
+            <li>Web Server (Nginx, Apache)</li>
+            <li>Database, Wordpress, Moodle</li>
+            <li>Mail Server, Webmail Server, Webmin, Cacti</li>
+          </ul>
+        </div>
+
+        <div class="skill-block">
+          <h4>Mikrotik MTCNA</h4>
+          <ul>
+            <li>Routing Static</li>
+            <li>Wireless</li>
+            <li>Hotspot</li>
+            <li>Security Profile</li>
+            <li>Firewall, NAT, mangle</li>
+            <li>Address List, Layer 7, Web Proxy</li>
+            <li>Simple Firewall, Filter Firewall</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="motto">“Geprek Aja Dulu, Urusan Diet Belakangan!”</div>
+
+    <footer>
+      <div class="footer-section">
+        <div class="logo">Nuansa Fried Chicken</div>
+      </div>
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>
+          Jl. Raya Pemataran<br />
+          Lingkungan, RT.04/RW.10, Palulo, Nglepok,<br />
+          Kec. Nglepok, Kabupaten Blitar, Jawa Timur
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Hubungi Kami</h4>
+        <p>0815-1148-1184</p>
+        <div class="socials">
+          <a
+            href="https://api.whatsapp.com/send/?phone=62081511481184&text&type=phone_number&app_absent=0"
+            >📱</a
+          >
+          <a href="https://www.instagram.com/nuansa.friedchicken24/">📸</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

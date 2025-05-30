@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #a0c64f, #f9a825);
+      }
+
+      header {
+        background-color: #33691e;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      header .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        background-color: #689f38;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #558b2f;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        justify-content: center;
+        background: linear-gradient(to right, #a0c64f, #f9a825);
+      }
+
+      .photo-section {
+        flex: 1 1 250px;
+        max-width: 300px;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .photo-box {
+        background-color: #dcedc8;
+        padding: 1rem;
+        border-radius: 20px;
+        border: 4px solid #33691e;
+        display: inline-block;
+      }
+
+      .photo-box img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #33691e;
+      }
+
+      .photo-box p {
+        margin-top: 0.5rem;
+        font-weight: bold;
+        color: #2e7d32;
+      }
+
+      .desc-section {
+        flex: 2 1 300px;
+        padding: 1rem;
+        font-family: "Georgia", serif;
+        font-size: 1.1rem;
+        color: #4e342e;
+      }
+
+      footer {
+        background-color: #1b5e20;
+        color: white;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      footer .left,
+      footer .right {
+        flex: 1 1 250px;
+        margin: 10px;
+      }
+
+      footer h4 {
+        margin-bottom: 1rem;
+      }
+
+      footer a,
+      footer p {
+        color: white;
+        text-decoration: none;
+        line-height: 1.6;
+      }
+
+      .socials {
+        margin-top: 1rem;
+      }
+
+      .socials i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
+
+      .slogan {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-style: italic;
+        color: #c5e1a5;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+    <script>
+      // Untuk future interaktifitas jika mau dikembangkan (misal menu hamburger)
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Nuansa <br /><small>Fried Chicken</small></div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="vinaaboutme.html">About me</a>
+        <a href="vinapengalaman.html">Pengalaman</a>
+        <a href="vinakemampuan.html">Kemampuan</a>
+        <a href="vinasertifikat.html">Sertifikat</a>
+        <a href="vinakontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="photo-section">
+        <div class="photo-box">
+          <img src="images/vina.jpeg" alt="Foto Vina" />
+          <p>Vina<br />Mustika Sari</p>
+        </div>
+      </div>
+      <div class="desc-section">
+        <p>
+          Saya merupakan siswi SMK jurusan Teknik Komputer dan Jaringan yang
+          memiliki ketertarikan dalam bidang jaringan komputer, perangkat keras,
+          dan teknologi informasi. Saya aktif mengikuti kegiatan praktikum dan
+          pelatihan untuk meningkatkan kemampuan teknis serta keterampilan kerja
+          sama dan komunikasi.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="left">
+        <p class="slogan">"Geprek Aja Dulu, Urusan Diet Belakangan!"</p>
+        <h4>Nuansa <br />Nuansa Fried Chicken</h4>
+      </div>
+      <div class="right">
+        <h4>Hubungi Kami</h4>
+        <p>0815-1148-1184</p>
+        <p>
+          Alamat:<br />
+          Jl. Raya Pewartaan<br />
+          Lingkungan, RT.04/ RW.10, Pulemo, Nglepok,<br />
+          Kec. Nglepok, Kabupaten Blitar, Jawa Timur
+        </p>
+        <div class="socials">
+          <i>🌐</i>
+          <i>📷</i>
+          <i>💬</i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to right, #a8e063, #ffb347);
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #33691e;
+      }
+
+      nav a {
+        color: white;
+        padding: 15px 20px;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #689f38;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .profile {
+        background-color: #dcedc8;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .profile img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .profile h3 {
+        margin-top: 10px;
+      }
+
+      .description {
+        max-width: 600px;
+        margin: 10px;
+        font-family: "Merriweather", serif;
+      }
+
+      footer {
+        background-color: #2e7d32;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1000px;
+        padding: 20px 0;
+      }
+
+      .footer-section {
+        margin: 10px;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+        }
+
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Nuansa Fried Chicken</h1>
+    </header>
+
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="restiaboutme.html">About me</a>
+      <a href="restipengalaman.html">Pengalaman</a>
+      <a href="restikemampuan.html">Kemampuan</a>
+      <a href="restisertifikat.html">Sertifikat</a>
+      <a href="restikontak.html">Kontak</a>
+    </nav>
+
+    <section class="container">
+      <div class="profile">
+        <img src="images/resti.jpeg" alt="Resti Dwi Oktavia" />
+        <h3>Resti Dwi Oktavia</h3>
+      </div>
+      <div class="description">
+        <p>
+          Saya adalah siswa SMKN 1 Nglegok dari jurusan Teknik Komputer dan
+          Jaringan, dan saya berusia tujuh belas tahun. Saya memiliki tempat
+          tinggal di Blitar, Jawa Timur. Saya memiliki minat di jurusan IT
+          karena saya ingin mengeksplor lebih jauh lagi teknologi di era global
+          ini.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p><em>"Geprek Aja Dulu, Urusan Diet Belakangan!"</em></p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <strong>Alamat</strong><br />
+          Jl. Raya Penataran<br />
+          Lingkungan, RT.04/RW.10, Palulo, Nglegok<br />
+          Kec. Nglegok, Kabupaten Blitar, Jawa Timur
+        </div>
+        <div class="footer-section">
+          <strong>Hubungi Kami</strong><br />
+          0815-1148-1184
+          <div>
+            <span>📱</span>
+            <span>📷</span>
+            <span>📧</span>
+          </div>
+        </div>
+      </div>
+      <div>© 2025 Nuansa Fried Chicken</div>
+    </footer>
+  </body>
+</html>

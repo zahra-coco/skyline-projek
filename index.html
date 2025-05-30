@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Impact;
+        background: linear-gradient(135deg, #005500, #008000);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth; /* Smooth scrolling */
+      }
+
+      /* Header Section */
+      header {
+        display: flex;
+        align-items: center; /* Vertikal: Tengah */
+        justify-content: space-between; /* Mengatur jarak antar elemen */
+        padding: 10px 40px;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: relative; /* Untuk membantu posisi tulisan di tengah */
+      }
+
+      /* Logo dan Judul di Header */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Jarak antara logo dan tulisan */
+      }
+
+      .logo img {
+        max-width: 200px; /* Ukuran logo */
+        height: auto;
+      }
+
+      header h2 {
+        position: absolute;
+        font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffcc00;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      /* nav */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Times New Roman", Times, serif;
+        background-color: rgba(30, 255, 0, 0.15);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 15px;
+        transition: color 0.3s;
+        -webkit-tap-highlight-color: transparent; /* Touch-friendly */
+      }
+
+      nav ul li a:hover {
+        color: #ffcc00;
+        transform: scale(1.1);
+      }
+
+      /* Section */
+      section {
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+
+      /* Main Content */
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      main h3 {
+        font-size: 36px;
+        font-style: italic;
+        line-height: 1.5;
+        position: relative;
+        z-index: 3; /* Teks lebih tinggi dari jajar genjang */
+        color: #fffb00;
+      }
+
+      /* Tombol Pesan Sekarang */
+      .order-now {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #fff700;
+        color: #005500;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        position: relative;
+        z-index: 3; /* Tombol lebih tinggi dari jajar genjang */
+        transition: background-color 0.3s ease;
+      }
+
+      .order-now:hover {
+        background-color: #ffaa00;
+      }
+
+      main .image {
+        max-width: 150px; /* Lebar gambar tetap */
+        height: auto; /* Tinggi gambar dapat diubah */
+        object-fit: contain; /* Menjaga gambar tetap proporsional */
+        margin-left: 100px; /* Memberikan jarak antara gambar dan teks */
+      }
+
+      /* Jajar Genjang */
+      .paralelogram {
+        position: absolute;
+        top: 50%; /* Sesuaikan posisi vertikal */
+        left: 50%; /* Sesuaikan posisi horizontal */
+        width: 90%; /* Lebar elemen */
+        height: 400px; /* Tinggi elemen */
+        background-color: rgba(0, 128, 0, 0.201); /* Transparansi lebih jelas */
+        transform: translate(-50%, -50%) skew(-20deg); /* Efek posisi dan kemiringan */
+        z-index: 0; /* Di belakang konten */
+        border-radius: 15px; /* Opsional, jika ingin sudut melengkung */
+      }
+
+      .vertical-line {
+        position: absolute;
+        width: 20px; /* Lebar garis */
+        height: 750px; /* Tinggi garis */
+        background-color: yellow; /* Warna garis */
+        border: solid #005500 2px;
+        top: 0;
+        z-index: 2; /* Pastikan terlihat di atas background */
+      }
+
+      /* Garis vertikal di sisi kiri */
+      .vertical-line.left {
+        right: 10%; /* Atur jarak dari sisi kanan */
+      }
+
+      /* Garis vertikal di sisi kanan */
+      .vertical-line.right {
+        right: 5%; /* Atur jarak dari sisi kanan */
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .text h2 {
+          text-align: center;
+          font-size: 28px;
+        }
+
+        .image img {
+          max-width: 300px;
+        }
+      }
+
+      /* Footer */
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #005500;
+        padding: 20px;
+        position: relative;
+        z-index: 3;
+      }
+
+      footer h1 {
+        font-size: 18px;
+        color: #fff;
+        margin-top: 10px;
+      }
+
+      .social-media {
+        position: fixed; /* Posisi tetap di layar */
+        bottom: 20px; /* Jarak dari bawah */
+        left: 20px; /* Jarak dari kiri */
+        display: flex; /* Agar ikon sejajar secara horizontal */
+        flex-direction: column; /* Susun ikon secara vertikal */
+        gap: 10px; /* Jarak antar ikon */
+      }
+
+      .social-media a img {
+        width: 60px; /* Ukuran ikon */
+        height: 55px;
+        border-radius: 20%; /* Membuat ikon berbentuk lingkaran */
+        transition: transform 0.3s; /* Efek transisi saat hover */
+      }
+
+      .social-media a img:hover {
+        transform: scale(1.2); /* Perbesar ikon saat hover */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Nuansa Fried Chicken Logo" />
+        <h2>Makan nikmat<br />tetap hemat.</h2>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="pengembang.html">Pengembang</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="diskon.html">Diskon</a></li>
+        <li><a href="spot.html">spots</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="paralelogram"></div>
+      <div class="image">
+        <img src="images/nasiayam.png" alt="ayam geprek" />
+      </div>
+      <div class="content">
+        <h3>Selamat datang di Nuansa Fried Chicken</h3>
+        <div class="text">
+          <a href="menu.html" class="order-now">Pesan Sekarang</a>
+        </div>
+      </div>
+      <div class="vertical-line left"></div>
+      <div class="vertical-line right"></div>
+    </main>
+
+    <section></section>
+    <footer>
+      <h1>Nuansa Fried Chicken</h1>
+      <div class="social-media">
+        <a
+          href="https://www.facebook.com/p/Nuansa-Friedchicken-61555325495927/"
+          target="_blank"
+        >
+          <img src="images/logofb.png" alt="Facebook" />
+        </a>
+        <a
+          href="https://www.instagram.com/nuansa.friedchicken24/"
+          target="_blank"
+        >
+          <img src="images/logoig2.png" alt="Instagram" />
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

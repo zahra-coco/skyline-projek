@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Merriweather", serif;
+        background-color: #f0f0f0;
+        color: #222;
+      }
+
+      header {
+        background: linear-gradient(to right, #2e7d32, #66bb6a);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        background-color: transparent;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-bar {
+        background-color: #fdd835;
+        padding: 0.3rem 2rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+        background: linear-gradient(to right, #ffeb3b, #f44336);
+        gap: 2rem;
+      }
+
+      .description {
+        background-color: #00c853;
+        color: yellow;
+        padding: 1.5rem;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .description p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .image-box {
+        max-width: 350px;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .image-box img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .image-box:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      footer {
+        background-color: #2e7d32;
+        color: white;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+      .footer-section {
+        flex: 1 1 250px;
+        margin: 1rem;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section p {
+        font-size: 0.9rem;
+      }
+
+      .sosmed a {
+        text-decoration: none;
+        color: white;
+        margin-right: 1rem;
+        font-size: 1.3rem;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav {
+          justify-content: center;
+          margin-top: 1rem;
+        }
+
+        footer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo Nuansa" />
+        Nuansa
+        <span style="font-size: 0.7rem; font-weight: normal"
+          >Fried Chicken</span
+        >
+      </div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+         <a href="pengembang.html">Pengembang</a>
+        <a href="menu.html">Menu</a>
+        <a href="membership.html">Membership</a>
+        <a href="diskon.html">Diskon</a>
+        <a href="diskon.html">Spots</a>
+        <a href="https://www.instagram.com/nuansa.friedchicken24/"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </nav>
+    </header>
+
+    <div class="contact-bar">CONTACT PERSON : 0815-1148-1184</div>
+
+    <main>
+      <div class="description">
+        <p>
+          Ayam geprek, kuliner yang menggoda selera! Daging ayam yang crispy
+          berpadu dengan sambal pedas yang menggigit, menciptakan harmoni rasa
+          yang sempurna. Setiap suapan membawa kelezatan yang tak terlupakan.
+          Cocok dinikmati bersama nasi hangat dan sayuran segar, ayam geprek
+          selalu berhasil menghangatkan hati dan perut. Rasakan sensasi pedasnya
+          yang bikin ketagihan!
+        </p>
+      </div>
+
+      <div class="image-box">
+        <img src="images/nasiayam.png" alt="Ayam Geprek" />
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <p><em>"Geprek Aja Dulu, Urusan Diet Belakangan!"</em></p>
+        <h3>Nuansa Friend Chicken</h3>
+      </div>
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>
+          Jl. Raya Penataran<br />Lingkungan, RT.04/RW.10, Pulwo, Nglekog, Kec.
+          Nglekog, Kabupaten Blitar, Jawa Timur
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Hubungi Kami</h4>
+        <p>0815-1148-1184</p>
+        <div class="sosmed">
+          <a href="https://www.instagram.com/nuansa.friedchicken24/">📷</a>
+          <a href="https://api.whatsapp.com/send/?phone=62081511481184&text&type=phone_number&app_absent=0">📞</a>
+          <a href="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5686593826745!2d112.2149174!3d-8.0433265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed007f9507eb%3A0x4ebed36554877162!2sNUANSA%20FRIED%20CHICKEN!5e0!3m2!1sid!2sid!4v1747141000316!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>">📍</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

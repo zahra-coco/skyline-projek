@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-green: #2d8c2d;
+        --secondary-green: #4caf50;
+        --text-color: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(to right, #a8e063, #56ab2f);
+        color: #333;
+      }
+
+      header {
+        background-color: var(--primary-green);
+        padding: 1rem;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-logo {
+        font-size: 1.5rem;
+        color: var(--text-color);
+        font-weight: bold;
+      }
+
+      .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .nav-menu a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background-color: var(--secondary-green);
+      }
+
+      .profile {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .profile img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #333;
+      }
+
+      .profile-text {
+        max-width: 600px;
+        font-family: "Merriweather", serif;
+      }
+
+      .profile-text p {
+        line-height: 1.6;
+      }
+
+      .name {
+        text-transform: lowercase;
+        margin-top: 0.5rem;
+        font-weight: bold;
+      }
+
+      footer {
+        background-color: #2b2b2b;
+        color: var(--text-color);
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-content div {
+        flex: 1;
+        margin: 0.5rem;
+        min-width: 200px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .nav-menu {
+          flex-direction: column;
+          width: 100%;
+        }
+        .profile {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .footer-content {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="nav-logo">Nuansa Fried Chicken</div>
+        <div class="nav-menu">
+          <a href="home.html">Home</a>
+          <a href="syahdanaboutme.html">About Me</a>
+          <a href="syahdanpengalaman.html">Pengalaman</a>
+          <a href="syahdankemampuan.html">Kemampuan</a>
+          <a href="syahdansertifikat.html">Sertifikat</a>
+          <a href="syahdankontak.html">Kontak</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="profile">
+      <img src="images/syahdan.jpeg" alt="Profile Picture" />
+      <div class="profile-text">
+        <p>
+          Saya merupakan siswi SMK jurusan Teknik Komputer dan Jaringan yang
+          memiliki ketertarikan dalam bidang jaringan komputer, perangkat keras,
+          dan teknologi informasi. Saya aktif mengikuti kegiatan praktikum dan
+          pelatihan untuk meningkatkan kemampuan teknis serta keterampilan kerja
+          sama dan komunikasi.
+        </p>
+        <div class="name">syahdan abi .s</div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong>Nuansa Fried Chicken</strong><br />
+          "Geprek Aja Dulu, Urusan Diet Belakangan!"
+        </div>
+        <div>
+          <strong>Alamat</strong><br />
+          Jl. Raya Penataran Lingkungan, RT.04/RW.10, Palulo, Nglepok,<br />
+          Kec. Nglegok, Kabupaten Blitar, Jawa Timur
+        </div>
+        <div>
+          <strong>Hubungi Kami</strong><br />
+          0815-1148-1184
+          <br /><br />
+          <a
+            href="https://www.google.com/search?q=nuansa+fried+chicken&rlz=1C1GCEU_en&oq=n&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyEwgCEC4YgwEYxwEYsQMY0QMYgAQyBggDEEUYOTIGCAQQRRg7MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEHOTg1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+            style="color: white; margin-right: 0.5rem"
+            >🌐</a
+          >
+          <a
+            href="https://www.instagram.com/nuansa.friedchicken24/"
+            style="color: white; margin-right: 0.5rem"
+            >📷</a
+          >
+          <a
+            href="https://www.facebook.com/p/Nuansa-Friedchicken-61555325495927/"
+            style="color: white"
+            >📱</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025 Nuansa Fried Chicken</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #2ecc71;
+        --secondary: #27ae60;
+        --accent: #f1c40f;
+        --dark: #2c3e50;
+        --light: #ecf0f1;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(to right, #43cea2, #185a9d);
+        color: white;
+        position: relative;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--primary);
+        flex-wrap: wrap;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      main {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .drinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .our-drink-image {
+        max-width: 300px;
+        margin-bottom: 1.5rem;
+      }
+
+      .drinks-section {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 12px;
+        width: 100%;
+        font-family: "Playfair Display", serif;
+      }
+
+      .drinks-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      .menu-link {
+        position: fixed;
+        bottom: 20px;
+        right: 90px;
+        background: #e6c300;
+        color: black;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 0.5rem 0;
+        cursor: pointer;
+      }
+
+      .cta-button {
+        background: var(--accent);
+        color: black;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 1.5rem;
+      }
+
+      #cart-button {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        background-color: var(--accent);
+        color: black;
+        padding: 0.75rem 1rem;
+        border-radius: 50%;
+        font-weight: bold;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      #cart-popup {
+        position: fixed;
+        bottom: 160px;
+        right: 20px;
+        background-color: white;
+        color: black;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        display: none;
+        z-index: 1001;
+        min-width: 200px;
+      }
+
+      #cart-popup ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
+      }
+
+      #cart-popup li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+
+      #pay-button {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .footer-grid div {
+        flex: 1;
+        margin: 0.5rem;
+      }
+
+      @media (max-width: 600px) {
+        header,
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .menu-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Nuansa Fried Chicken</h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+         <a href="pengembang.html">Pengembang</a>
+        <a href="menu.html">Menu</a>
+        <a href="membership.html">Membership</a>
+        <a href="spot.html">Spot</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="drinks-container">
+        <img
+          src="images/ourdrink.png"
+          alt="Our Driink"
+          class="our-drink-image"
+        />
+        <section class="drinks-section">
+          <div class="menu-item" onclick="addToCart('Air Mineral', 3000)">
+            <span>Air Mineral</span><span>Rp 3.000</span>
+          </div>
+          <div class="menu-item" onclick="addToCart('Es Teh', 3000)">
+            <span>Es Teh</span><span>Rp 3.000</span>
+          </div>
+          <div class="menu-item" onclick="addToCart('Es Jeruk', 3500)">
+            <span>Es Jeruk</span><span>Rp 3.500</span>
+          </div>
+          <div class="menu-item" onclick="addToCart('Kopi Hitam', 5000)">
+            <span>Kopi Hitam</span><span>Rp 5.000</span>
+          </div>
+          <div class="menu-item" onclick="addToCart('Cappucino Panas', 6000)">
+            <span>Cappucino Panas</span><span>Rp 6.000</span>
+          </div>
+          <div class="menu-item" onclick="addToCart('Es Cappucino', 7000)">
+            <span>Es Cappucino</span><span>Rp 7.000</span>
+          </div>
+          <div class="menu-item" onclick="addToCart('Cappucino Float', 9000)">
+            <span>Cappucino Float</span><span>Rp 9.000</span>
+          </div>
+          <div
+            class="menu-item"
+            onclick="addToCart('Fruit Tea/Teh Kotak', 4000)"
+          >
+            <span>Fruit Tea/Teh Kotak</span><span>Rp 4.000</span>
+          </div>
+          <a href="menu.html" target="_blank" class="menu-link"
+            >Click here for Menu</a
+          >
+        </section>
+      </div>
+    </main>
+
+    <button id="cart-button" onclick="toggleCart()">🛒</button>
+
+    <div id="cart-popup">
+      <ul id="cart-items"></ul>
+      <strong>Total: Rp <span id="cart-total">0</span></strong
+      ><br /><br />
+      <button id="pay-button" onclick="payNow()">Bayar</button>
+    </div>
+
+    <footer>
+      <p>"Geprek Aja Dulu, Urusan Diet Belakangan!"</p>
+      <div class="footer-grid">
+        <div>
+          <strong>Alamat</strong><br />
+          Jl. Raya Penataran<br />
+          Lingkungan, RT.04/RW.10,<br />
+          Palulo, Nglegok, Kec. Nglegok,<br />
+          Kabupaten Blitar, Jawa Timur
+        </div>
+        <div>
+          <strong>Hubungi Kami</strong><br />
+          0815-1148-1184
+        </div>
+      </div>
+      <div>
+        <a href="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5686593826745!2d112.2149174!3d-8.0433265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed007f9507eb%3A0x4ebed36554877162!2sNUANSA%20FRIED%20CHICKEN!5e0!3m2!1sid!2sid!4v1747141000316!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" style="margin: 0 0.5rem; color: white">📍</a>
+        <a href="https://www.instagram.com/nuansa.friedchicken24/" style="margin: 0 0.5rem; color: white">📷</a>
+      </div>
+    </footer>
+
+    <script>
+      let cart = [];
+
+      function addToCart(name, price) {
+        cart.push({ name, price });
+        alert(name + " berhasil ditambahkan ke keranjang!");
+        updateCartPopup();
+      }
+
+      function toggleCart() {
+        const popup = document.getElementById("cart-popup");
+        popup.style.display =
+          popup.style.display === "none" || popup.style.display === ""
+            ? "block"
+            : "none";
+      }
+
+      function updateCartPopup() {
+        const list = document.getElementById("cart-items");
+        const total = document.getElementById("cart-total");
+        list.innerHTML = "";
+        let sum = 0;
+        cart.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item.name + " - Rp " + item.price.toLocaleString();
+          list.appendChild(li);
+          sum += item.price;
+        });
+        total.textContent = sum.toLocaleString();
+      }
+
+      function payNow() {
+        if (cart.length === 0) {
+          alert("Keranjang masih kosong!");
+        } else {
+          alert("Pembayaran selesai, mohon tunggu sebentar.");
+          cart = [];
+          updateCartPopup();
+          toggleCart();
+        }
+      }
+    </script>
+  </body>
+</html>

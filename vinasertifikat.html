@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken - Vina Mustika Sari</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(90deg, #2c6b1f, #fdd600);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-family: "Arial Black", sans-serif;
+        color: white;
+        font-size: 1.8rem;
+      }
+
+      .logo span {
+        color: #ffea00;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        transition: background 0.3s;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .hero {
+        display: flex;
+        padding: 2rem;
+        flex-wrap: wrap;
+        background: #d3e8cb;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .profile-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 20px;
+        text-align: center;
+        width: 280px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-card img {
+        border-radius: 50%;
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid #2c6b1f;
+      }
+
+      .profile-card h3 {
+        margin-top: 1rem;
+        font-family: "Times New Roman", serif;
+        font-size: 1.2rem;
+        color: #2c6b1f;
+      }
+
+      .certificates {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        flex: 1;
+      }
+
+      .certificates img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .motto {
+        text-align: center;
+        background: #eaf4e4;
+        padding: 1rem;
+        font-style: italic;
+        font-family: "Times New Roman", serif;
+      }
+
+      footer {
+        background: #2c6b1f;
+        color: white;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+
+      .footer-section {
+        flex: 1 1 200px;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+
+      .socials a {
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: white;
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Nuansa <span>Fried Chicken</span></div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="vinaaboutme.html">About me</a>
+        <a href="vinapengalaman.html">Pengalaman</a>
+        <a href="vinakemampuan.html">Kemampuan</a>
+        <a href="vinasertifikat.html">Sertifikat</a>
+        <a href="vinakontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="profile-card">
+        Vina Mustika Sari
+        <img src="images/vina.jpeg" alt="Foto Vina" />
+        <h3>Vina Mustika Sari</h3>
+      </div>
+      <div class="certificates">
+        <img src="images/vinrh104.jpeg" alt="Sertifikat 1" />
+        <img src="images/vinlinuxfundamental.jpeg" alt="Sertifikat 2" />
+        <img src="images/vinnetworkfundamental.jpeg" alt="Sertifikat 3" />
+        <img src="images/vinpython.jpeg" alt="Sertifikat 4" />
+        <img src="images/vinvirtual.jpeg" alt="Sertifikat 5" />
+        <img src="images/vinsimulasijaringan.jpeg" alt="Sertifikat 6" />
+      </div>
+    </div>
+
+    <div class="motto">“Geprek Aja Dulu, Urusan Diet Belakangan!”</div>
+
+    <footer>
+      <div class="footer-section">
+        <div class="logo">Nuansa Fried Chicken</div>
+      </div>
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>
+          Jl. Raya Pemataran<br />
+          Lingkungan, RT.04/RW.10, Palulo, Nglepok,<br />
+          Kec. Nglepok, Kabupaten Blitar, Jawa Timur
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Hubungi Kami</h4>
+        <p>0815-1148-1184</p>
+        <div class="socials">
+          <a
+            href="https://api.whatsapp.com/send/?phone=62081511481184&text&type=phone_number&app_absent=0"
+            >📱</a
+          >
+          <a href="https://www.instagram.com/nuansa.friedchicken24/">📸</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

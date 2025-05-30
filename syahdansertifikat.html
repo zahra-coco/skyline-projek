@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Merriweather", serif;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(to right, #4caf50, #8bc34a);
+        color: white;
+        padding: 1rem 2rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .profile {
+        max-width: 200px;
+        margin: 1rem;
+      }
+
+      .certificate-container {
+        flex: 1;
+        margin: 1rem;
+      }
+
+      .certificate-container img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background: #4caf50;
+        color: white;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 0.9rem;
+      }
+
+      footer div {
+        flex: 1 1 200px;
+        margin: 1rem 0;
+      }
+
+      @media (max-width: 600px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Nuansa Fried Chicken</div>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="syahdanaboutme.html">About me</a>
+          <a href="syahdanpengalaman.html">Pengalaman</a>
+          <a href="syahdankemampuan.html">Kemampuan</a>
+          <a href="syahdansertifikat.html">Sertifikat</a>
+          <a href="syahdankontak.html">Kontak</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="profile">
+        <img
+          src="images/syahdan.jpeg"
+          alt="Foto Profil"
+          style="width: 100%; border-radius: 50%"
+        />
+        <p style="text-align: center; margin-top: 0.5rem">Syahdan Abi .S</p>
+      </div>
+      <div class="certificate-container">
+        <img src="images/syahdanjs.png" alt="Sertifikat" />
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Nuansa Fried Chicken</strong><br />
+        "Geprek Aja Dulu, Urusan Diet Belakangan!"
+      </div>
+      <div>
+        <strong>Alamat</strong><br />
+        Jl. Raya Penataran Lingkungan, RT.04/ RW.10, Palulo, Nglegok,<br />
+        Kec. Nglegok, Kabupaten Blitar, Jawa Timur
+      </div>
+      <div>
+        <strong>Hubungi Kami</strong><br />
+        0815-1148-1184<br />
+        <span>
+          <img src="images/logofb.png" alt="Facebook" width="20" />
+          <img src="images/logoig2.png" alt="Instagram" width="20" />
+          <img src="images/logowa.png" alt="WhatsApp" width="20" />
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

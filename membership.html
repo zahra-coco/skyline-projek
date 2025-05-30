@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership - Nuansa Fried Chicken</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to right, #a8e063, #56ab2f);
+        color: #222;
+      }
+
+      header {
+        background: #004d00;
+        color: white;
+        padding: 10px 20px;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        height: 40px;
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .nav-links li a.active {
+        text-decoration: underline;
+      }
+
+      .membership-section {
+        padding: 20px;
+      }
+
+      .promo-banner {
+        background: red;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .promo-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+        justify-content: center;
+      }
+
+      .promo-card {
+        background: linear-gradient(to bottom, #fff4c4, white);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+      }
+
+      .promo-card p {
+        margin: 10px 0;
+      }
+
+      .klaim-btn,
+      .gabung-btn {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .klaim-btn:hover,
+      .gabung-btn:hover {
+        background-color: darkred;
+      }
+
+      .benefit-list {
+        max-width: 400px;
+      }
+
+      .benefit-list h3 {
+        margin-bottom: 10px;
+      }
+
+      .benefit-list ul {
+        list-style: none;
+      }
+
+      .benefit-list li {
+        margin-bottom: 12px;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      .benefit-list li span {
+        margin-right: 8px;
+      }
+
+      footer {
+        background: #004d00;
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+      }
+
+      .footer-left,
+      .footer-center,
+      .footer-right {
+        flex: 1 1 250px;
+      }
+
+      .footer-logo {
+        height: 30px;
+        margin: 10px 0;
+      }
+
+      .sosmed span {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .promo-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="images/logo.png" alt="Nuansa Logo" class="logo" />
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="profile.html">Profile</a></li>
+           <li><a href="pengembang.html">Pengembang</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="membership.html" class="active">Membership</a></li>
+          <li><a href="diskon.html">Diskon</a></li>
+          <li><a href="spot.html">Spot</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="membership-section">
+        <div class="promo-banner">
+          <h2>Join Membership Now</h2>
+          <p>and Get Special Promotion!</p>
+        </div>
+
+        <div class="promo-content">
+          <div class="promo-card">
+            <p class="harga">Rp 20.000</p>
+            <p class="min-belanja">Min. Belanja Rp 150.000</p>
+            <p class="berlaku">Berlaku Hingga 31.5.2025</p>
+            <button class="klaim-btn">Klaim</button>
+            <a href="daftarmember.html" target="_blank" class="gabung-btn"
+              >Gabung Sekarang</a
+            >
+          </div>
+
+          <div class="benefit-list">
+            <h3>Nikmati Keuntungan Lainnya</h3>
+            <ul>
+              <li><span>🎂</span> Nikmati Keuntungan Ulang Tahun</li>
+              <li>
+                <span>📩</span> Dapatkan 1 poin untuk setiap belanja sebesar
+                20.000
+              </li>
+              <li><span>🎁</span> Nikmati 100 poin bonus pendaftaran</li>
+              <li>
+                <span>🎟️</span> Nikmati Rp15.000 voucher untuk member baru
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>"Geprek Aja Dulu, Urusan Diet Belakangan!"</h3>
+          <img src="logo.png" alt="Nuansa Logo" class="footer-logo" />
+          <p>Nuansa Friend Chicken</p>
+        </div>
+        <div class="footer-center">
+          <h4>Alamat</h4>
+          <p>
+            Jl. Raya Penataran<br />
+            Lingkungan, RT.04/RW.10, Palulo, Nglegok,<br />
+            Kec. Nglegok, Kabupaten Blitar,<br />
+            Jawa Timur
+          </p>
+        </div>
+        <div class="footer-right">
+          <h4>Hubungi Kami</h4>
+          <p>0815-1148-1184</p>
+          <div class="sosmed">
+           <a href="https://www.instagram.com/nuansa.friedchicken24/">📷</a>
+          <a href="#">📞</a>
+          <a href="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5686593826745!2d112.2149174!3d-8.0433265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed007f9507eb%3A0x4ebed36554877162!2sNUANSA%20FRIED%20CHICKEN!5e0!3m2!1sid!2sid!4v1747141000316!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>">📍</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle menu untuk responsive
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("show");
+        });
+
+      // Aksi tombol Klaim
+      document
+        .querySelector(".klaim-btn")
+        .addEventListener("click", function () {
+          alert("Selamat kamu mendapat vouchernyaa!");
+        });
+    </script>
+  </body>
+</html>

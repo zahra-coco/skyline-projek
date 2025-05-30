@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diskon Nuansa Fried Chicken</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #d6f7a3, #c5f1a6);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background: linear-gradient(to right, #137c30, #54c147);
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff000;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .content {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .promo-container {
+        background-color: #d9f6aa;
+        padding: 2rem;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .promo-img img {
+        width: 400px;
+        max-width: 300%;
+      }
+
+      .promo-details {
+        text-align: left;
+        background: #fff79f;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .promo-details del {
+        color: gray;
+      }
+
+      .qty-controls {
+        margin: 1rem 0;
+      }
+
+      .qty-controls button {
+        width: 32px;
+        height: 32px;
+        margin: 0 5px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: #198754;
+        color: white;
+      }
+
+      .order-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: #197c3b;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .footer-info {
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        .promo-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        Nuansa <span style="color: white">Fried Chicken</span>
+      </div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+        <a href="pengembang.html">Pengembang</a>
+        <a href="menu.html">Menu</a>
+        <a href="membership.html">Membership</a>
+        <a href="diskon.html">Diskon</a>
+        <a href="spot.html">Spot</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div class="promo-container">
+        <div class="promo-img">
+          <img src="images/logoflashsale.png" alt="Flash Sale" />
+        </div>
+        <div class="promo-details">
+          <p><strong>BAYAR 1 DAPAT 2</strong></p>
+          <p>Rp <del>30.000</del></p>
+          <h2 style="color: red">Rp 20.000</h2>
+          <p>2 Ayam Geprek + Nasi</p>
+          <div class="qty-controls">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">0</span>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+          <button class="order-btn" onclick="orderNow()">Pesan sekarang</button>
+        </div>
+        <div>
+          <img src="images/nasiflashsale.png" alt="Paket Ayam" width="400" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-info">
+        <p><strong>Nuansa Fried Chicken</strong></p>
+        <p>
+          Jl. Raya Penataran, Lingkungan RT.04/RW.10, Palulo, Nglegok, Blitar,
+          Jawa Timur
+        </p>
+        <p>Hubungi: 0815-1148-1184</p>
+        <p>
+          <a
+            href="https://www.instagram.com/nuansa.friedchicken24/"
+            style="color: white"
+            >Instagram</a
+          >
+          |
+          <a
+            href="https://www.facebook.com/p/Nuansa-Friedchicken-61555325495927/"
+            style="color: white"
+            >Facebook</a
+          >
+          |
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let qty = 0;
+      function changeQty(change) {
+        qty = Math.max(0, qty + change);
+        document.getElementById("qty").textContent = qty;
+      }
+
+      function orderNow() {
+        if (qty > 0) {
+          alert("Pesanan anda sudah terkirim, mohon di tunggu yaa!");
+          qty = 0;
+          document.getElementById("qty").textContent = qty;
+        } else {
+          alert("Silakan pilih jumlah pesanan terlebih dahulu.");
+        }
+      }
+    </script>
+  </body>
+</html>

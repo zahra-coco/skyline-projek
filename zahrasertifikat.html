@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sertifikat - Nuansa Fried Chicken</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Georgia, serif;
+        background: linear-gradient(to right, #a8d063, #f2a950);
+      }
+      header {
+        background-color: #2b5f2b;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: white;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        padding-left: 20px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+      }
+      nav a {
+        background-color: #ffdd57;
+        color: #000;
+        padding: 8px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+      .content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .certificate-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        justify-content: center;
+        align-items: start;
+      }
+      .certificate-gallery img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background-color: white;
+      }
+      footer {
+        background-color: #194d19;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: left;
+      }
+      .footer-section {
+        max-width: 250px;
+        margin: 10px;
+      }
+      .footer-section h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      .footer-section p,
+      .footer-section a {
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+      }
+      .footer-social {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .footer-social a {
+        background-color: white;
+        color: green;
+        padding: 6px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+        }
+        .certificate-gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Nuansa Fried Chicken</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="zahraaboutme.html">About Me</a>
+        <a href="zahrapengalaman.html">Pengalaman</a>
+        <a href="zahrakemampuan.html">Kemampuan</a>
+        <a href="zahrasertifikat.html">Sertifikat</a>
+        <a href="zahrakontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <div class="content">
+      <h2>Zahra Putri Asifa</h2>
+      <div class="certificate-gallery">
+        <img src="images/zlinuxfundamental.png" alt="Sertifikat 1" />
+        <img src="images/znetworkfundamental.png" alt="Sertifikat 2" />
+        <img src="images/zvirtualmachnine.png" alt="Sertifikat 3" />
+        <img src="images/zjs.png" alt="Sertifikat 4" />
+        <img src="images/zrh124.png" alt="Sertifikat 5" />
+        <img src="images/zrh104.png" alt="Sertifikat 6" />
+        <img src="images/zmtcna.png" alt="Sertifikat 7" />
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-section">
+        <p>"Geprek Aja Dulu, Urusan Diet Belakangan!"</p>
+      </div>
+      <div class="footer-section">
+        <h4>Alamat</h4>
+        <p>
+          Jl. Raya Penataran<br />Lingkungan, RT.04/RW.10,<br />Palulo, Nglegok,
+          Kec. Nglegok,<br />Kabupaten Blitar, Jawa Timur
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Hubungi Kami</h4>
+        <p><strong>0815-1148-1184</strong></p>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/p/Nuansa-Friedchicken-61555325495927/"
+            >Facebook</a
+          >
+          <a href="https://www.instagram.com/nuansa.friedchicken24/"
+            >Instagram</a
+          >
+          <a
+            href="https://api.whatsapp.com/send/?phone=62081511481184&text&type=phone_number&app_absent=0"
+            >Whatshapp</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

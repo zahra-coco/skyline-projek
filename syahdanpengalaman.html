@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #4caf50;
+        --accent: #f4a300;
+        --dark: #2e7d32;
+        --light: #f9f9f9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #e0e0e0;
+      }
+
+      header {
+        background: linear-gradient(90deg, #4caf50, #8bc34a);
+        padding: 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      nav a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        background-color: white;
+        color: #2e7d32;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background-color: var(--accent);
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: linear-gradient(to right, #66bb6a, #ffee58);
+        padding: 2rem;
+        gap: 2rem;
+      }
+
+      .profile-img {
+        flex: 1;
+        max-width: 200px;
+        text-align: center;
+      }
+
+      .profile-img img {
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid black;
+      }
+
+      .description {
+        flex: 2;
+        font-family: "Merriweather", serif;
+        color: #212121;
+      }
+
+      footer {
+        background-color: var(--dark);
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      footer div {
+        margin: 1rem;
+      }
+
+      .slogan {
+        font-style: italic;
+        font-weight: bold;
+        color: #c8e6c9;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1
+        style="
+          color: white;
+          text-align: center;
+          font-family: 'Merriweather', serif;
+        "
+      >
+        Nuansa Fried Chicken
+      </h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="syahdanaboutme.html">About me</a>
+        <a href="syahdanpengalaman.html">Pengalaman</a>
+        <a href="syahdankemampuan.html">Kemampuan</a>
+        <a href="syahdansertifikat.html">Sertifikat</a>
+        <a href="syahdankontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="container">
+      <div class="profile-img">
+        <img src="images/syahdan.jpeg" alt="Foto Profil" />
+        <p>syahdan abi .s</p>
+      </div>
+      <div class="description">
+        <h2>Proyek Praktek Sekolah – SMK Negeri 1 Nglegok</h2>
+        <p>2023 – sekarang</p>
+        <ul>
+          <li>Konfigurasi Mikrotik Router</li>
+          <li>Setup LAN dan berbagi printer dalam jaringan</li>
+          <li>Instalasi dan setting sistem operasi (Windows & Linux)</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="slogan">"Geprek Aja Dulu, Urusan Diet Belakangan!"</div>
+      <div>
+        <strong>Alamat</strong><br />
+        Jl. Raya Penataran<br />
+        Lingkungan, RT.04/RW.10, Palulo, Nglegok,<br />
+        Kec. Nglegok, Kabupaten Blitar, Jawa Timur
+      </div>
+      <div>
+        <strong>Hubungi Kami</strong><br />
+        <a style="color: white; font-weight: bold" href="tel:081511481184"
+          >0815-1148-1184</a
+        >
+        <div>
+          <span>🌐 📱 💬</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

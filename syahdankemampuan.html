@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+      }
+      header {
+        background: linear-gradient(to right, #2e7d32, #81c784);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .logo {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+      }
+      nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .profile img {
+        width: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+      .profile h2 {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+      }
+      .profile p,
+      .profile ul {
+        font-family: "Merriweather", serif;
+        text-align: left;
+        line-height: 1.6;
+      }
+      .profile ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+      }
+      footer {
+        background: #2e7d32;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem;
+      }
+      .footer-section {
+        flex: 1 1 200px;
+        margin: 1rem;
+      }
+      .footer-section h3 {
+        margin-bottom: 1rem;
+      }
+      .footer-section p,
+      .footer-section a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+        .profile {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Nuansa Fried Chicken</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="syahdanaboutme.html">About me</a>
+        <a href="syahdanpengalaman.html">Pengalaman</a>
+        <a href="syahdankemampuan.html">Kemampuan</a>
+        <a href="syahdansertifikat.html">Sertifikat</a>
+        <a href="syahdankontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="profile">
+        <img src="images/syahdan.jpeg" alt="Foto Profil" />
+        <h2>syahdan abi .s</h2>
+        <p>
+          Instalasi dan Konfigurasi Jaringan LAN<br />
+          Merancang jaringan lokal (LAN), setting IP Address (static & DHCP),
+          serta menguji konektivitas menggunakan ping dan tracer.<br /><br />
+
+          Konfigurasi Router Mikrotik<br />
+          Melakukan konfigurasi dasar menggunakan Winbox, mengatur DHCP Server,
+          NAT, dan firewall sederhana.<br /><br />
+
+          Administrasi Sistem<br />
+          Instalasi Windows Server, pembuatan user account, pengaturan hak
+          akses, serta backup dan keamanan data dasar.<br /><br />
+
+          Pembuatan Web Dasar (HTML, CSS, PHP)<br />
+          Membuat halaman web, form input, serta koneksi database menggunakan
+          PHP & MySQL.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <h3>Nuansa Fried Chicken</h3>
+        <p>"Geprek Aja Dulu, Urusan Diet Belakangan!"</p>
+      </div>
+      <div class="footer-section">
+        <h3>Alamat</h3>
+        <p>
+          Jl. Raya Penataran Lingkungan, RT.04/RW.10, Palulo, Nglegok, Kec.
+          Nglegok, Kabupaten Blitar, Jawa Timur
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Hubungi Kami</h3>
+        <p><strong>0815-1148-1184</strong></p>
+        <p>
+          <a href="https://www.instagram.com/nuansa.friedchicken24/"
+            >Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/p/Nuansa-Friedchicken-61555325495927/"
+            >Facebook</a
+          >
+          |
+          <a
+            href="https://api.whatsapp.com/send/?phone=62081511481184&text&type=phone_number&app_absent=0"
+            >WhatsApp</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

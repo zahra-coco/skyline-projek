@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sertifikat - Resti Dwi Oktavia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(to right, #a4e063, #f6b54f);
+        color: #222;
+      }
+
+      header {
+        background-color: #2e7d32;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        background: #c5e1a5;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        color: #2e7d32;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background: #aed581;
+      }
+
+      .container {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .profile {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .profile img {
+        border-radius: 12px;
+        width: 140px;
+        height: auto;
+      }
+
+      .profile h2 {
+        font-family: "Playfair Display", serif;
+        margin-top: 1rem;
+        color: #2e7d32;
+      }
+
+      .certificates {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .certificates img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #1b5e20;
+        color: white;
+        padding: 2rem 1rem;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .footer-grid {
+          flex-direction: row;
+          justify-content: space-around;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Nuansa Fried Chicken</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="restiaboutme.html">About me</a>
+        <a href="restipengalaman.html">Pengalaman</a>
+        <a href="restikemampuan.html">Kemampuan</a>
+        <a href="restisertifikat.html">Sertifikat</a>
+        <a href="restikontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="container">
+      <div class="profile">
+        <img src="images/resti.jpeg" alt="Resti Dwi Oktavia" />
+        <h2>Resti Dwi Oktavia</h2>
+      </div>
+
+      <div class="certificates">
+        <img src="images/resfortinet.jpeg" alt="Sertifikat 1" />
+        <img src="images/resnetworkfundamental.jpeg" alt="Sertifikat 2" />
+        <img src="images/reslinuxfundamental.jpeg" alt="Sertifikat 3" />
+        <img src="images/resjs.jpeg" alt="Sertifikat 4" />
+        <img src="images/resrh104.jpeg" alt="Sertifikat 5" />
+        <img src="images/resrh124.jpeg" alt="Sertifikat 6" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <strong>"Geprek Aja Dulu, Urusan Diet Belakangan!"</strong>
+        </div>
+        <div>
+          <strong>Alamat</strong><br />
+          Jl. Raya Penataran, Lingkungan RT.04/RW.10, Palulo, Nglegok,<br />
+          Kec. Nglegok, Kabupaten Blitar, Jawa Timur
+        </div>
+        <div>
+          <strong>Hubungi Kami</strong><br />
+          0815-1148-1184<br />
+          <span>📱 💬 📸</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

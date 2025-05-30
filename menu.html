@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Fried Chicken</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+      }
+      header {
+        background: linear-gradient(to right, #2d8a27, #66bb4f);
+        padding: 1rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin: 0 1rem;
+        color: white;
+        text-decoration: none;
+      }
+      .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: linear-gradient(to right, #c1f0b8, #e1f7c6);
+      }
+      .menu-item {
+        background: #90c05d;
+        border: 2px solid #ccc;
+        width: 220px;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        transition: transform 0.2s;
+      }
+      .menu-item:hover {
+        transform: scale(1.05);
+      }
+      .menu-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+      .menu-item img:hover {
+        transform: scale(1.1);
+      }
+      .best-link {
+        position: fixed;
+        bottom: 20px;
+        right: 90px;
+        background: #e6c300;
+        color: black;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .price {
+        color: red;
+        font-weight: bold;
+        margin: 0.5rem 0;
+      }
+      .btn {
+        background: #4caf50;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        cursor: pointer;
+      }
+      .qty-controls {
+        margin: 0.5rem 0;
+      }
+      .qty-controls button {
+        padding: 0.3rem 0.7rem;
+        margin: 0 0.5rem;
+      }
+      .stars {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+        color: gold;
+      }
+      .cart-btn,
+      .bestseller-btn {
+        position: fixed;
+        bottom: 20px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        padding: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      .cart-btn {
+        right: 20px;
+        border-radius: 50%;
+      }
+      .bestseller-btn {
+        right: 80px;
+        border-radius: 8px;
+      }
+      .cart-content {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        width: 300px;
+      }
+      footer {
+        background: linear-gradient(to right, #2d8a27, #66bb4f);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .menu-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .cart-btn,
+        .bestseller-btn {
+          position: static;
+          margin: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nuansa <span style="color: gold">Fried Chicken</span></h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+        <a href="pengembang.html">Pengembang</a>
+        <a href="menu.html">Menu</a>
+        <a href="membership.html">Membership</a>
+        <a href="diskon.html">Diskon</a>
+        <a href="spot.html">Spot</a>
+      </nav>
+    </header>
+
+    <div class="menu-container">
+      <div class="menu-item" data-name="Ayam Krispi" data-price="6000">
+        <img src="images/ayamkrispi.png" alt="Ayam Krispi" />
+        <h3>Ayam Krispi</h3>
+        <p class="price">Rp.6.000,-</p>
+        <div class="stars">★★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+
+       <div class="menu-item" data-name="Ayam Geprek" data-price="8000">
+        <img src="images/ayamgeprek.png" alt="Ayam Geprek" />
+        <h3>Ayam Geprek</h3>
+        <p class="price">Rp.8.000,-</p>
+        <div class="stars">★★★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+      
+      <div class="menu-item" data-name="Nasi Goreng" data-price="12000">
+        <img src="images/nasigoreng.png" alt="Nasi Goreng" />
+        <h3>Nasi Goreng</h3>
+        <p class="price">Rp.12.000,-</p>
+        <div class="stars">★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+      
+      <div class="menu-item" data-name="Hamburger" data-price="10000">
+        <img src="images/burger.png" alt="Hamburger" />
+        <h3>Hamburger</h3>
+        <p class="price">Rp.10.000,-</p>
+        <div class="stars">★★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+
+       <div class="menu-item" data-name="Jamur Krispi" data-price="8000">
+        <img src="images/jamurcrispy.png" alt="Jamur Crispy" />
+        <h3>Jamur Krispi</h3>
+        <p class="price">Rp.8.000,-</p>
+        <div class="stars">★★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+
+       <div class="menu-item" data-name="Ayam Popcorn" data-price="7000">
+        <img src="images/ayampopcorn.png" alt="Chicken Popcorn" />
+        <h3>Chicken Popcorn</h3>
+        <p class="price">Rp.7.000,-</p>
+        <div class="stars">★★★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+
+      <div class="menu-item" data-name="Tahu Krispi" data-price="6000">
+        <img src="images/tahukres.png" alt="Tahu Crispy" />
+        <h3>Tahu Krispi</h3>
+        <p class="price">Rp.6.000,-</p>
+        <div class="stars">★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+
+      <div class="menu-item" data-name="Ice Cream" data-price="7000">
+        <img src="images/icecream.png" alt="Ice Cream" />
+        <h3>Ice Cream</h3>
+        <p class="price">Rp.7.000,-</p>
+        <div class="stars">★★★★★</div>
+        <div class="qty-controls">
+          <button onclick="changeQty(this, -1)">-</button>
+          <span>0</span>
+          <button onclick="changeQty(this, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(this)">Pesan sekarang</button>
+      </div>
+    </div>
+
+       <a href="bestseller.html" target="_blank" class="best-link"
+      >Click here for Bestseller</a>
+    </button>
+    <button class="cart-btn" onclick="toggleCart()">🛒</button>
+
+    <div class="cart-content" id="cart">
+      <div id="cart-items"></div>
+      <p>
+        <strong>Total: Rp. <span id="cart-total">0</span></strong>
+      </p>
+      <button onclick="submitOrder()">Kirim Pesanan</button>
+    </div>
+
+    <footer>
+      <p>
+        "Geprek Aja Dulu, Urusan Diet Belakangan!"<br />Jl. Raya Penataran,
+        RT.04/RW.10, Nglegok, Blitar, Jawa Timur<br />Hubungi Kami:
+        0815-1148-1184
+      </p>
+    </footer>
+
+    <script>
+      const cart = {};
+
+      function changeQty(btn, delta) {
+        const span = btn.parentElement.querySelector("span");
+        let val = parseInt(span.textContent);
+        val = Math.max(0, val + delta);
+        span.textContent = val;
+      }
+
+      function addToCart(btn) {
+        const item = btn.closest(".menu-item");
+        const name = item.dataset.name;
+        const price = parseInt(item.dataset.price);
+        const qty = parseInt(item.querySelector("span").textContent);
+        console.log(name, price, qty);
+        if (qty === 0) return alert("Jumlah harus lebih dari 0");
+
+        if (!cart[name]) {
+          cart[name] = { qty: 0, price };
+        }
+        cart[name].qty += qty;
+        renderCart();
+        item.querySelector("span").textContent = 0;
+      }
+
+      function renderCart() {
+        const cartItems = document.getElementById("cart-items");
+        const totalEl = document.getElementById("cart-total");
+        cartItems.innerHTML = "";
+        let total = 0;
+        for (const item in cart) {
+          const subtotal = cart[item].qty * cart[item].price;
+          total += subtotal;
+          cartItems.innerHTML += `<p>${item} x ${cart[item].qty} = Rp.${subtotal.toLocaleString("id-ID")}</p>`;
+        }
+        totalEl.textContent = total.toLocaleString("id-ID");
+
+      }
+
+      function toggleCart() {
+        const cartBox = document.getElementById("cart");
+        cartBox.style.display =
+          cartBox.style.display === "block" ? "none" : "block";
+      }
+
+      function submitOrder() {
+        alert("Pesanan sudah terkirim, mohon ditunggu yaa!");
+        for (const item in cart) delete cart[item];
+        renderCart();
+      }
+    </script>
+  </body>
+</html>
